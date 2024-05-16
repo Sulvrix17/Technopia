@@ -108,7 +108,7 @@ html {
 .header .dropdown {
   top: 47px;
   right: 195px;
-  padding: 30px 0 0 0;
+  padding: 0;
   margin: 0;
   line-height: 0;
   list-style: none;
@@ -116,9 +116,10 @@ html {
   background: rgb(255, 255, 255);
   border-radius: 10px;
   width: 150px;
-  height: 180px;
-  display: none;
-  /* transition: all 0.3s ease-in-out 0.4s; */
+  height: 0px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
 }
 
 .header .dropdown li {
@@ -134,6 +135,12 @@ html {
 
 .header .links li:hover .dropdown {
   display: grid;
+  height: 180px;
+  opacity: 1;
+  padding: 30px 0 0 0;
+  &.dropdown a {
+    display: block;
+  }
 }
 
 .header .links li a {
@@ -141,18 +148,18 @@ html {
   font-size: 20px;
   text-decoration: none;
   color: var(--primary-color);
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .header .dropdown li a {
-  padding: 0;
   margin: 0;
+  line-height: 50px;
   font-size: 20px;
   text-decoration: none;
   border-bottom: none;
   color: var(--primary-color);
-  transition: color 0.3s ease-in-out;
-  line-height: 50px;
   position: relative;
+  display: none;
+  transition: 0.2s ease-in-out;
 }
 
 .header #active,
@@ -161,9 +168,10 @@ html {
 }
 
 .hero {
-  margin-top: 150px;
+  height: calc(100% - 75px);
+  /* margin-top: 150px; */
   display: flex;
-  padding: 0 200px;
+  padding: 0 100px;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
@@ -206,24 +214,40 @@ html {
 .about .container {
   padding: 15px 50px 15px 50px;
 }
+
+/*End About*/
+
+/*Start Explore*/
+.explore {
+  padding: 10px;
+  background: rgb(235, 235, 235);
+  height: 720px;
+  z-index: 98;
+}
+.explore .container {
+  padding: 15px 25px 15px 25px;
+  height: 100%;
+}
+
 .cards {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 75px 0 0 0;
 }
 
 .cards .glass {
   position: relative;
-  width: 180px;
-  height: 200px;
+  width: 300px;
+  height: 400px;
   background: linear-gradient(#fff2, transparent);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s;
+  transition: 0.4s;
   border-radius: 10px;
   margin: 0 -45px;
   backdrop-filter: blur(10px);
@@ -233,6 +257,13 @@ html {
 .cards:hover .glass {
   transform: rotate(0deg);
   margin: 0 10px;
+}
+.cards .glass:hover {
+  border: 2px solid var(--secondary-color);
+  /* transform: scale(1.05); */
+}
+.cards .glass:active {
+  transform: scale(0.9);
 }
 
 .cards .glass::before {
@@ -245,26 +276,12 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--primary-color);
 }
 .cards .glass svg {
   font-size: 2.5em;
-  fill: #fff;
+  fill: #000;
 }
-
-/*End About*/
-
-/*Start Explore*/
-.explore {
-  padding: 10px;
-  background: rgb(235, 235, 235);
-  height: 720px;
-  z-index: 98;
-}
-.explore .container {
-  padding: 15px 50px 15px 50px;
-}
-
 /*End Explore*/
 
 /*Start Contact*/
@@ -276,6 +293,64 @@ html {
 }
 .contact .container {
   padding: 15px 50px 15px 50px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
 }
 
 /*End Contact*/
