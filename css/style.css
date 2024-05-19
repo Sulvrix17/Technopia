@@ -82,8 +82,13 @@ hr {
 /* ! ---------------- ! */
 .header {
   height: 800px;
-  /* background-color: rgba(10, 189, 198, 0.35); */
+  /* background-image: radial-gradient(100% 100% at 50% 50%, #97266d 0%, #44337a 100%); */
+
   background-color: rgba(113, 28, 145, 0.35);
+
+  /* background-image: radial-gradient(100% 100% at 0% 0%, #702459 45%, rgba(255, 0, 0, 0) 100%),
+    radial-gradient(100% 100% at 35% 35%, #97266d 51%, rgba(255, 0, 0, 0) 100%),
+    radial-gradient(100% 100% at 40% 40%, #b83280 100%, rgba(255, 0, 0, 0) 100%); */
   z-index: -99;
 }
 
@@ -255,23 +260,25 @@ hr {
 
 .about-content {
   padding: 15px 150px;
-  text-align: left;
+  text-align: justify;
   font-size: 1.5em;
 }
 .first-image {
-  background-image: linear-gradient(0deg, var(--fifth-color) 1%, transparent 70%), url("../images/college.jpg");
-  box-shadow: 0 4px 30px rgba(200, 0, 255, 0.5);
+  background-image: linear-gradient(0deg, var(--fifth-color), transparent), url("../images/college.jpg");
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   background-size: cover;
   background-position: center;
+  border-radius: 10px;
   width: 250px;
   height: 250px;
   /* background-blend-mode: multiply; */
 }
 .second-image {
-  background-image: linear-gradient(0deg, var(--secondary-color) 1%, transparent 70%), url("../images/technopia.png");
-  box-shadow: 0 4px 30px rgba(0, 255, 213, 0.5);
+  background-image: linear-gradient(0deg, var(--secondary-color), transparent), url("../images/technopia.png");
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   background-size: cover;
   background-position: center;
+  border-radius: 10px;
   width: 250px;
   height: 250px;
   /* background-blend-mode: multiply; */
@@ -302,6 +309,7 @@ hr {
   flex-direction: row-reverse;
   justify-content: space-between;
 }
+
 /* ! ---------------- ! */
 /*?      End About     ?*/
 /* ! ---------------- ! */
@@ -369,9 +377,8 @@ hr {
   align-items: center;
   color: var(--primary-color);
 }
-.cards .glass svg {
-  font-size: 2.5em;
-  fill: #000;
+.cards .glass img {
+  filter: hue-rotate(50deg);
 }
 /* ! ---------------- ! */
 /*?     End Explore    ?*/
@@ -410,3 +417,43 @@ hr {
 /* ! ---------------- ! */
 /*?     End Footer     ?*/
 /* ! ---------------- ! */
+
+/* ! ---------------- ! */
+/**   PROJECTS PAGE    **/
+/* ! ---------------- ! */
+
+.slideshow {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  max-width: 700px;
+  margin: 50px auto;
+
+  * {
+    outline: none;
+  }
+
+  .slider {
+    box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 1);
+  }
+
+  .slider-track {
+    transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+  }
+
+  .item {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+      transform: scale(1.2);
+    }
+
+    &.slick-active img {
+      transform: scale(1);
+    }
+  }
+}
