@@ -1,4 +1,6 @@
-/*Start Variables*/
+/* ! ---------------- ! */
+/* ?  Start Variables ? */
+/* ! ---------------- ! */
 :root {
   /* --primary-color: #4b4b4b; */
   --primary-color: #091833;
@@ -9,8 +11,13 @@
   --sixth-color: #07989f;
   scroll-behavior: smooth;
 }
-/*End Variables*/
-/*Start Global Rules*/
+/* ! ---------------- ! */
+/*?    End Variables   ?*/
+/* ! ---------------- ! */
+
+/* ! ---------------- ! */
+/*? Start Global Rules ?*/
+/* ! ---------------- ! */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -60,10 +67,21 @@ html {
   padding-left: 5px;
   top: -12px;
 }
-/*End Global Rules*/
-/*Start header*/
+hr {
+  align-self: center;
+  width: 75%;
+  color: var(--forth-color);
+  margin: 0;
+}
+/* ! ---------------- ! */
+/* ? End Global Rules ? */
+/* ! ---------------- ! */
+
+/* ! ---------------- ! */
+/* ?   Start Header   ? */
+/* ! ---------------- ! */
 .header {
-  height: 720px;
+  height: 800px;
   /* background-color: rgba(10, 189, 198, 0.35); */
   background-color: rgba(113, 28, 145, 0.35);
   z-index: -99;
@@ -212,32 +230,89 @@ html {
   background-clip: text;
   color: transparent;
   text-shadow: none;
-  transition: 0.3s ease-in-out;
 }
-.hero span:hover {
-  -webkit-text-stroke: 0.3px white;
-}
-/*End header*/
+/* ! ---------------- ! */
+/*?      End Header    ?*/
+/* ! ---------------- ! */
 
-/*Start About*/
+/* ! ---------------- ! */
+/*?     Start About    ?*/
+/* ! ---------------- ! */
 .about {
   padding: 10px;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  height: 720px;
+  height: 800px;
   z-index: 99;
 }
 .about .container {
   padding: 15px 50px 15px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;
 }
 
-/*End About*/
+.about-content {
+  padding: 15px 150px;
+  text-align: left;
+  font-size: 1.5em;
+}
+.first-image {
+  background-image: linear-gradient(0deg, var(--fifth-color) 1%, transparent 70%), url("../images/college.jpg");
+  box-shadow: 0 4px 30px rgba(200, 0, 255, 0.5);
+  background-size: cover;
+  background-position: center;
+  width: 250px;
+  height: 250px;
+  /* background-blend-mode: multiply; */
+}
+.second-image {
+  background-image: linear-gradient(0deg, var(--secondary-color) 1%, transparent 70%), url("../images/technopia.png");
+  box-shadow: 0 4px 30px rgba(0, 255, 213, 0.5);
+  background-size: cover;
+  background-position: center;
+  width: 250px;
+  height: 250px;
+  /* background-blend-mode: multiply; */
+}
 
-/*Start Explore*/
+.about-content p {
+  width: 250px;
+  margin: 0;
+}
+.about-content span {
+  color: var(--secondary-color);
+}
+.about-content a {
+  text-decoration: none;
+  color: var(--third-color);
+}
+.about-content i {
+  font-size: 0.75em;
+}
+.first-paragraph {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.second-paragraph {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+/* ! ---------------- ! */
+/*?      End About     ?*/
+/* ! ---------------- ! */
+
+/* ! ---------------- ! */
+/*?    Start Explore   ?*/
+/* ! ---------------- ! */
 .explore {
   padding: 10px;
   background-color: rgba(113, 28, 145, 0.35);
-  height: 720px;
+  height: 800px;
   z-index: 98;
 }
 .explore .container {
@@ -298,23 +373,31 @@ html {
   font-size: 2.5em;
   fill: #000;
 }
-/*End Explore*/
+/* ! ---------------- ! */
+/*?     End Explore    ?*/
+/* ! ---------------- ! */
 
-/*Start Contact*/
+/* ! ---------------- ! */
+/*?    Start Contact   ?*/
+/* ! ---------------- ! */
 .contact {
   padding: 10px;
   background: rgb(255, 255, 255);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  height: 720px;
+  height: 800px;
   z-index: 98;
 }
 .contact .container {
   padding: 15px 50px 15px 50px;
 }
 
-/*End Contact*/
+/* ! ---------------- ! */
+/*?     End Contact    ?*/
+/* ! ---------------- ! */
 
-/*Start Footer*/
+/* ! ---------------- ! */
+/*?    Start Footer    ?*/
+/* ! ---------------- ! */
 .footer {
   padding: 10px;
   background: var(--primary-color);
@@ -324,4 +407,6 @@ html {
   padding: 0;
 }
 
-/*End footer*/
+/* ! ---------------- ! */
+/*?     End Footer     ?*/
+/* ! ---------------- ! */
