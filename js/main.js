@@ -14,7 +14,7 @@ function ToggleNavBar() {
     navbar.css({ alignItems: "center" });
     navbar.css({ gap: "50px" });
     navbar.css({ right: "0" });
-    navbar.css({ top: "calc(100% + 0)" });
+    navbar.css({ top: "100%" });
     navbar.css({ position: "absolute" });
     navbar.css({ backgroundColor: "rgb(240, 240, 240)" });
   } else {
