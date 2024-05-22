@@ -20,6 +20,10 @@ $.each(sectionArray, function (index, value) {
   $(".click-scroll")
     .eq(index)
     .click(function (e) {
+      var checkBox = $("#checkbox1");
+      var navbar = $("#navbarNav");
+      checkBox.prop("checked", false);
+      navbar.removeAttr("style");
       var offsetClick = $("#" + "section_" + value).offset().top - 70;
       e.preventDefault();
       $("html, body").animate(
