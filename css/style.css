@@ -909,15 +909,37 @@ hr {
   }
 }
 @media (max-width: 600px) {
+  .about {
+    margin: 0;
+    padding-bottom: 50px;
+    justify-content: space-between;
+    height: auto;
+    align-items: center;
+    align-content: center;
+    hr {
+      display: none;
+    }
+    .about-content {
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+    .container {
+      padding: 10px;
+    }
+  }
   .hero {
+    padding: 5px 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
   }
   .hero img {
-    right: 0;
-    left: 0;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     float: none;
     height: 300px;
     width: 300px;
