@@ -9,30 +9,41 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/all.min.css" />
+    <script src="js/jquery.js"></script>
   </head>
 
   <body>
     <!-- Start Header -->
-    <div class="header" id="home">
-      <!-- <div class="container"> -->
-      <nav>
+    <div class="header" id="section_1">
+      <nav class="navbar">
         <div class="title">
           <a href="index.html"> </a>
           <img class="logo" src="images/logo.png" alt="" />
           <label>TECHNOPIA</label>
         </div>
-        <ul class="links">
-          <li><a href="#home" id="active">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li>
-            <a href="#explore">EXPLORE <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="toggle-nav">
+          <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden" onclick="ToggleNavBar()" />
+          <label for="checkbox1">
+            <div class="hamburger hamburger1">
+              <span class="bar bar1"></span>
+              <span class="bar bar2"></span>
+              <span class="bar bar3"></span>
+              <span class="bar bar4"></span>
+            </div>
+          </label>
+        </div>
+        <ul class="links navbar-nav" id="navbarNav">
+          <li class="nav-item"><a href="#section_1" class="nav-link click-scroll">HOME</a></li>
+          <li class="nav-item"><a href="#section_2" class="nav-link click-scroll">ABOUT</a></li>
+          <li class="nav-item">
+            <a href="#section_3" class="nav-link click-scroll">EXPLORE <i class="fa-solid fa-chevron-down"></i></a>
             <ul class="dropdown">
               <li><a href="projects.html">PROJECTS</a></li>
               <li><a href="gallery.html">GALLERY</a></li>
               <li><a href="goals.html">GOALS</a></li>
             </ul>
           </li>
-          <li><a href="#contact">CONTACT</a></li>
+          <li class="nav-item"><a href="#section_4" class="nav-link click-scroll">CONTACT</a></li>
         </ul>
       </nav>
       <div class="hero">
@@ -43,12 +54,11 @@
           </h1>
         </div>
       </div>
-      <!-- </div> -->
     </div>
     <!-- End Header -->
 
     <!-- Start About -->
-    <div class="about" id="about">
+    <div class="about" id="section_2">
       <div class="container">
         <div class="special-heading">
           <label>ABOUT</label>
@@ -75,7 +85,7 @@
     <!-- End About -->
 
     <!-- Start Explore -->
-    <div class="explore" id="explore">
+    <div class="explore" id="section_3">
       <div class="container">
         <div class="special-heading">
           <label>EXPLORE</label>
@@ -97,7 +107,7 @@
     <!-- End Explore -->
 
     <!-- Start Contact -->
-    <div class="contact" id="contact">
+    <div class="contact" id="section_4">
       <div class="container">
         <div class="special-heading">
           <label>CONTACT</label>
@@ -112,6 +122,8 @@
       <div class="container"></div>
     </div>
     <!-- End Footer -->
+    <script src="js/click-scroll.js"></script>
+    <script src="js/jquery.sticky.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
