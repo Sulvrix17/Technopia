@@ -8,102 +8,94 @@
     <!--Main Template CSS Files-->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
     <script src="js/jquery.js"></script>
   </head>
 
   <body>
     <!-- Start Header -->
-    <div class="header" id="home">
-      <nav>
+    <div class="header" id="section_1">
+      <nav class="navbar">
         <div class="title">
           <a href="index.html"> </a>
-          <img class="logo" src="../images/logo.png" alt="" />
+          <img class="logo" src="images/logo.png" alt="" />
           <label>TECHNOPIA</label>
         </div>
-        <ul class="links">
-          <li><a href="#projects" id="active">PROJECTS</a></li>
-          <li><a href="#uidev">UI DEVELOPMENT</a></li>
-          <li><a href="#soft-eng">SOFTWARE ENGINEERING</a></li>
-          <li><a href="#crypto">CRYPTOGRAPHY</a></li>
+        <div class="toggle-nav">
+          <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden" onclick="ToggleNavBar()" />
+          <label for="checkbox1">
+            <div class="hamburger hamburger1">
+              <span class="bar bar1"></span>
+              <span class="bar bar2"></span>
+              <span class="bar bar3"></span>
+              <span class="bar bar4"></span>
+            </div>
+          </label>
+        </div>
+        <ul class="links navbar-nav" id="navbarNav">
+          <li class="nav-item"><a href="#section_1" class="nav-link click-scroll">PROJECTS</a></li>
+          <li class="nav-item"><a href="#section_2" class="nav-link click-scroll">UI DEV</a></li>
+          <li class="nav-item">
+            <a href="#section_3" class="nav-link click-scroll">SOFTWARE ENG</a>
+          </li>
+          <li class="nav-item"><a href="#section_4" class="nav-link click-scroll">CRYPTO</a></li>
         </ul>
       </nav>
-    </div>
-    <!-- End Header -->
-
-    <!-- Start UIDEV -->
-    <div class="uidev" id="uidev">
-      <div class="container">
-        <div class="special-heading">
-          <label>UI Development</label>
-          <span>Second Year Projects</span>
-        </div>
-        <div class="projects-container">
-          <!-- ------------------------- -->
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content"></div>
-              <div class="content">
-                <p class="heading">Card Hover</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipii voluptas ten mollitia pariatur odit, ab minus ratione
-                  adipisci accusamus vel est excepturi laboriosam magnam necessitatibus dignissimos molestias.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- ------------------------- -->
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content"></div>
-              <div class="content">
-                <p class="heading">Card Hover</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipii voluptas ten mollitia pariatur odit, ab minus ratione
-                  adipisci accusamus vel est excepturi laboriosam magnam necessitatibus dignissimos molestias.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- ------------------------- -->
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content"></div>
-              <div class="content">
-                <p class="heading">Card Hover</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipii voluptas ten mollitia pariatur odit, ab minus ratione
-                  adipisci accusamus vel est excepturi laboriosam magnam necessitatibus dignissimos molestias.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- ------------------------- -->
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content"></div>
-              <div class="content">
-                <p class="heading">Card Hover</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipii voluptas ten mollitia pariatur odit, ab minus ratione
-                  adipisci accusamus vel est excepturi laboriosam magnam necessitatibus dignissimos molestias.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- ------------------------- -->
+      <div class="projects">
+        <div class="container">
+          <h1>PROJECTS</h1>
+          <h2>Here are some of the best projects made by Technopia members across all the major journey.</h2>
         </div>
       </div>
     </div>
-    <!-- End UIDEV -->
-    <!-- Start SOFTWARE -->
-    <div class="soft-eng" id="soft-eng">
+    <!-- End Header -->
+
+    <!-- Start About -->
+    <div class="uidev" id="section_2">
+      <div class="container">
+        <div class="special-heading">
+          <label>UI DEVELOPEMENT</label>
+          <span>Second Year Projects</span>
+        </div>
+        <div class="projects-container">
+          <div class="card-container">
+            <div class="card">
+              <div class="img-content"></div>
+              <div class="content">
+                <p class="heading">Card Hover</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipii voluptas ten mollitia pariatur odit, ab minus ratione
+                  adipisci accusamus vel est excepturi laboriosam magnam necessitatibus dignissimos molestias.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="card-container">
+            <div class="card">
+              <div class="img-content"></div>
+              <div class="content">
+                <p class="heading">Card Hover</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipii voluptas ten mollitia pariatur odit, ab minus ratione
+                  adipisci accusamus vel est excepturi laboriosam magnam necessitatibus dignissimos molestias.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Start Explore -->
+    <div class="softeng" id="section_3">
       <div class="container">
         <div class="special-heading">
           <label>SOFTWARE ENGINEERING</label>
           <span>Third Year Projects</span>
         </div>
         <div class="projects-container">
-          <!-- ------------------------- -->
           <div class="card-container">
             <div class="card">
               <div class="img-content"></div>
@@ -116,7 +108,7 @@
               </div>
             </div>
           </div>
-          <!-- ------------------------- -->
+          <!--  -->
           <div class="card-container">
             <div class="card">
               <div class="img-content"></div>
@@ -129,46 +121,19 @@
               </div>
             </div>
           </div>
-          <!-- ------------------------- -->
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content"></div>
-              <div class="content">
-                <p class="heading">Card Hover</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipii voluptas ten mollitia pariatur odit, ab minus ratione
-                  adipisci accusamus vel est excepturi laboriosam magnam necessitatibus dignissimos molestias.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- ------------------------- -->
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content"></div>
-              <div class="content">
-                <p class="heading">Card Hover</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipii voluptas ten mollitia pariatur odit, ab minus ratione
-                  adipisci accusamus vel est excepturi laboriosam magnam necessitatibus dignissimos molestias.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- ------------------------- -->
         </div>
       </div>
     </div>
-    <!-- End SOFTWARE -->
-    <!-- Start CRYPTO -->
-    <div class="crypto" id="crypto">
+    <!-- End Explore -->
+
+    <!-- Start Contact -->
+    <div class="crypto" id="section_4">
       <div class="container">
         <div class="special-heading">
           <label>CRYPTOGRAPHY</label>
           <span>Fourth Year Projects</span>
         </div>
         <div class="projects-container">
-          <!-- ------------------------- -->
           <div class="card-container">
             <div class="card">
               <div class="img-content"></div>
@@ -181,7 +146,7 @@
               </div>
             </div>
           </div>
-          <!-- ------------------------- -->
+          <!--  -->
           <div class="card-container">
             <div class="card">
               <div class="img-content"></div>
@@ -194,43 +159,19 @@
               </div>
             </div>
           </div>
-          <!-- ------------------------- -->
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content"></div>
-              <div class="content">
-                <p class="heading">Card Hover</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipii voluptas ten mollitia pariatur odit, ab minus ratione
-                  adipisci accusamus vel est excepturi laboriosam magnam necessitatibus dignissimos molestias.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- ------------------------- -->
-          <div class="card-container">
-            <div class="card">
-              <div class="img-content"></div>
-              <div class="content">
-                <p class="heading">Card Hover</p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipii voluptas ten mollitia pariatur odit, ab minus ratione
-                  adipisci accusamus vel est excepturi laboriosam magnam necessitatibus dignissimos molestias.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- ------------------------- -->
         </div>
       </div>
     </div>
-    <!-- End SOFTWARE -->
+    <!-- End Contact -->
+
     <!-- Start Footer -->
     <div class="footer" id="footer">
       <div class="container"></div>
     </div>
     <!-- End Footer -->
-
+    <script src="js/click-scroll.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/jquery.sticky.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

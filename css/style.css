@@ -81,7 +81,7 @@ hr {
 /* ?   Start Header   ? */
 /* ! ---------------- ! */
 .header {
-  height: 800px;
+  height: auto;
   /* background-color: rgba(113, 28, 145, 0.35); */
   background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
   z-index: -99;
@@ -111,6 +111,9 @@ hr {
   height: 40px;
   z-index: 96;
 }
+.header img {
+  filter: brightness(0);
+}
 
 .header label {
   padding: 10px 0 0 0;
@@ -124,7 +127,7 @@ hr {
 
 .header .title a {
   background-color: rgba(0, 0, 0, 0);
-  width: 255px;
+  width: 290px;
   height: 50px;
   height: 50px;
   position: fixed;
@@ -710,8 +713,30 @@ hr {
 /* ! ---------------- ! */
 /**   PROJECTS PAGE    **/
 /* ! ---------------- ! */
+.projects {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.projects h1 {
+  font-size: 4em;
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.projects h2 {
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  width: 600px;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
 .uidev {
-  height: 800px;
+  height: auto;
   padding: 10px;
   background: rgb(255, 255, 255);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
@@ -720,18 +745,18 @@ hr {
   padding: 10px 0 10px 0;
 }
 
-.soft-eng .special-heading {
+.softeng .special-heading {
   padding: 10px 0 10px 0;
 }
-.soft-eng {
-  height: 800px;
+.softeng {
+  height: auto;
   padding: 10px;
-  background-color: rgba(255, 162, 255, 0.35);
+  background-color: rgb(240, 240, 240, 0.5);
 
   z-index: -40;
 }
 .crypto {
-  height: 800px;
+  height: auto;
   padding: 10px;
   background: rgb(255, 255, 255);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
@@ -743,6 +768,7 @@ hr {
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  gap: 25px;
 }
 .card-container {
   width: 300px;
@@ -826,6 +852,42 @@ hr {
 }
 
 /* ! ---------------- ! */
+/**   GALLERY PAGE    **/
+/* ! ---------------- ! */
+
+.gallery {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.gallery h1 {
+  font-size: 4em;
+  color: white;
+  text-align: center;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.gallery h2 {
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  width: 600px;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.pictures {
+  height: 700px;
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+.pictures .special-heading {
+  padding: 10px 0 10px 0;
+}
+/* ! ---------------- ! */
 /*? Start Media Queries ?*/
 /* ! ---------------- ! */
 /* @media (max-width: 590px) {
@@ -891,6 +953,15 @@ hr {
   .cards:hover .glass {
     margin: 0;
   }
+  .uidev .special-heading {
+    font-size: 80%;
+  }
+  .softeng .special-heading {
+    font-size: 80%;
+  }
+  .crypto .special-heading {
+    font-size: 80%;
+  }
 }
 @media (max-width: 800px) {
   .hero {
@@ -955,6 +1026,23 @@ hr {
     font-size: 1.5em;
     line-height: 30px;
     width: auto;
+  }
+  .projects h1 {
+    font-size: 2em;
+  }
+  .projects h2 {
+    font-size: 1em;
+    width: auto;
+  }
+  .gallery h1 {
+    font-size: 2em;
+  }
+  .gallery h2 {
+    font-size: 1em;
+    width: auto;
+  }
+  .pictures .special-heading {
+    font-size: 60%;
   }
 }
 /* ! ---------------- ! */
