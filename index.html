@@ -17,9 +17,9 @@
     <div class="header" id="section_1">
       <nav class="navbar">
         <div class="title">
-          <a href="index.html"> </a>
+          <a href="index.html" class="title-overlay"> </a>
           <img class="logo" src="images/logo.png" alt="" />
-          <label>TECHNOPIA</label>
+          <label class="title-text">TECHNOPIA</label>
         </div>
         <div class="toggle-nav">
           <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden" onclick="ToggleNavBar()" />
@@ -119,13 +119,46 @@
           <label>CONTACT</label>
           <span>How To Reach Us?</span>
         </div>
+        <div class="contact-details">
+          <div class="contact-info">
+            <i class="fa-solid fa-location-dot" style="width: 62px"></i>
+            <p>Address<small>Hadhramaut - Mukalla</small></p>
+          </div>
+          <div class="contact-info">
+            <i class="fa-solid fa-phone"></i>
+            <p>Phone<small>+967777777777</small></p>
+          </div>
+          <div class="contact-info">
+            <i class="fa-solid fa-envelope"></i>
+            <p>Email<small>technopia@contact.com</small></p>
+          </div>
+        </div>
+        <div class="contact-email">
+          <form id="contact-form">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="tel" placeholder="Phone" />
+            <textarea form="contact-form" placeholder="Message" rows="7" cols="40"></textarea>
+            <button>Send</button>
+          </form>
+        </div>
       </div>
     </div>
     <!-- End Contact -->
 
     <!-- Start Footer -->
     <div class="footer" id="footer">
-      <div class="container"></div>
+      <div class="container">
+        <div class="footer-contents">
+          <label class="rights">&copy; 2024 All Rights Reserverd | Technopia&trade; | Made in Mukalla</label>
+          <span class="socials">
+            <b class="twitter"><i class="fa-brands fa-x-twitter"></i></b>
+            <b class="github"><i class="fa-brands fa-github"></i></b>
+            <b class="instagram"><i class="fa-brands fa-instagram"></i></b>
+            <b class="discord"><i class="fa-brands fa-discord"></i></b>
+          </span>
+        </div>
+      </div>
     </div>
     <!-- End Footer -->
     <script src="js/click-scroll.js"></script>
