@@ -14,10 +14,10 @@ $(document).ready(function () {
     navbar.css({ alignItems: "center" });
     navbar.css({ gap: "50px" });
     navbar.css({ right: "0" });
-    navbar.css({ top: "-1100%" });
+    navbar.css({ top: "-9999%" });
     navbar.css({ position: "absolute" });
     navbar.css({ backgroundColor: "rgb(240, 240, 240)" });
-    navbar.css({ transition: "1s ease-in-out" });
+    navbar.css({ transition: "0.5s ease-in-out" });
   }
 });
 
@@ -28,7 +28,7 @@ function ToggleNavBar() {
   if (checkBox.is(":checked") == true) {
     navbar.css({ top: "100%" });
   } else {
-    navbar.css({ top: "-1100%" });
+    navbar.css({ top: "-9999%" });
   }
 }
 
@@ -50,9 +50,9 @@ $(window).on("resize", function () {
     navbar.css({ alignItems: "center" });
     navbar.css({ gap: "50px" });
     navbar.css({ right: "0" });
-    navbar.css({ top: "-1100%" });
+    navbar.css({ top: "-9999%" });
     navbar.css({ position: "absolute" });
     navbar.css({ backgroundColor: "rgb(240, 240, 240)" });
-    navbar.css({ transition: "1s ease-in-out" });
+    navbar.css({ transition: "0.5s ease-in-out" });
   }
 });

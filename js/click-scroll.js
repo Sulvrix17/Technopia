@@ -23,7 +23,7 @@ $.each(sectionArray, function (index, value) {
       var checkBox = $("#checkbox1");
       var navbar = $("#navbarNav");
       checkBox.prop("checked", false);
-      navbar.removeAttr("style");
+      navbar.css({ top: "-9999%" });
       var offsetClick = $("#" + "section_" + value).offset().top - 70;
       e.preventDefault();
       $("html, body").animate(
