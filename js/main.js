@@ -27,8 +27,10 @@ function ToggleNavBar() {
 
   if (checkBox.is(":checked") == true) {
     navbar.css({ top: "100%" });
+    navbar.css({ height: "100vh" });
   } else {
     navbar.css({ top: "-9999%" });
+    navbar.css({ height: "0px" });
   }
 }
 

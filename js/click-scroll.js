@@ -24,6 +24,7 @@ $.each(sectionArray, function (index, value) {
       var navbar = $("#navbarNav");
       checkBox.prop("checked", false);
       navbar.css({ top: "-9999%" });
+      navbar.css({ height: "0px" });
       var offsetClick = $("#" + "section_" + value).offset().top - 70;
       e.preventDefault();
       $("html, body").animate(
