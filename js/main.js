@@ -4,7 +4,7 @@ $(document).ready(function () {
     navbar.removeAttr("style");
   } else {
     navbar.css({ height: "100vh" });
-    navbar.css({ width: "100vw" });
+    +navbar.css({ width: "100vw" });
     navbar.css({ margin: "0" });
     navbar.css({ padding: "0" });
     navbar.css({ display: "flex" });
